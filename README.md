@@ -1,4 +1,4 @@
-# global-logger
+# Logger
 Simple logging utility with log levels - run in global scope.
 
 # motivation
