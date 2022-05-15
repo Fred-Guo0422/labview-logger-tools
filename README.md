@@ -1,58 +1,54 @@
-# Labview Logger Tools
-
-#### 介绍
+# global-logger
 Simple logging utility with log levels - run in global scope.
 
-#### 软件架构
-有相当多的日志包-这个试图成为一个非常简单的变体，它不需要在整个应用程序中连接，而是使用FGV代替。它引入了几个日志级别，以便轻松控制日志信息的深度。
+# motivation
+There are quite a few logging packages around - this one tries to be a very simple variant, which doesn't require to be wired throughout the application but uses a FGV instead. It introduces several logging levels to allow for easy control of the depth of logged information.
 
+# usage
+All you need is initialize your logger at the start of your application. Then log by specific level wherever in your application. Close the logger afterwards.
 
-#### 安装教程
+![global-logger-example](img/global-logger-example1.png)
+This snippet will produce the following in the `application_directory/logs/[year]/[month]/[day]/Demo_log.tsv`:
+```
+15:21:40.630 23.10.2018 INFO  For loop cycle: 0 Global_logger.lvlib:Example.vi
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+15:21:40.630 23.10.2018 WARN  Something might go wrong..  Global_logger.lvlib:Example.vi
 
-#### 使用说明
-您所需要的就是在应用程序开始时初始化日志记录器。然后在应用程序的任何地方按特定级别进行日志记录。然后关闭记录器。
-![输入图片说明](global-logger-example1.png)
-该代码段将产生以下内容 (application_directory/logs/[year]/[month]/[day]/Demo_log.tsv)
+15:21:40.630 23.10.2018 FATAL ..Ups ! Global_logger.lvlib:Example.vi
 
+```
 
-- 15:21:40.630 23.10.2018 INFO  For loop cycle: 0 Global_logger.lvlib:Example.vi
-- 15:21:40.630 23.10.2018 WARN  Something might go wrong..  Global_logger.lvlib:Example.vi
-- 15:21:40.630 23.10.2018 FATAL ..Ups ! Global_logger.lvlib:Example.vi
+Additionally you can create multiple named loggers and assign each of them with one to many output destinations (files or UI controls). See Examples.
 
-此外，您可以创建多个命名记录器，并为每个记录器分配一个输出目的地(文件或UI控件)。
-
-#### 参与贡献
-
-
-
-#### 特技
-
+# features
 - Globally accessible logger
 - Six logging levels
 - Configurable level meaning:
-    1. 这里是列表文本Standard: Ignores messages with log level which is less important that the logger's level.
-    2. 这里是列表文本Positive: Ignores messages with log level with greater importance that the logger's level.
-    3. 这里是列表文本Exact: Ignores messages with all levels except for the exact logger's level.
+  - Standard: Ignores messages with log level which is less important that the logger's level.
+  - Positive: Ignores messages with log level with greater importance that the logger's level.
+  - Exact: Ignores messages with all levels except for the exact logger's level.
 - Error wire check & error logging
-Configurable record fields:
-timestamp
-log level
-logger name
-message
-source VI
-source app
-Output to file
-csv, tsv formats
-year/month/day folder structure
-configurable file size
-configurable maximum logs age
-Output to UI controls
-String, Listbox, Multicolumn Listbox, Table controls
-Option to write to multiple named loggers
-Multiple outputs (file, UI) per logger each with it's own setup
-Configurable record ordering: new records to top / bottom
-Timestamp formatting
+- Configurable record fields:
+  - timestamp
+  - log level
+  - logger name
+  - message
+  - source VI
+  - source app
+- Output to file
+  - csv, tsv formats
+  - year/month/day folder structure
+  - configurable file size
+  - configurable maximum logs age
+- Output to UI controls
+  - String, Listbox, Multicolumn Listbox, Table controls
+- Option to write to multiple named loggers
+  - Multiple outputs (file, UI) per logger each with it's own setup
+- Configurable record ordering: new records to top / bottom
+- Timestamp formatting
+
+
+# next
+Contribution's welcome!
+## ideas for future versions
+- more intelligent/efficient Writer.vi - currently each record = 1 write operation
