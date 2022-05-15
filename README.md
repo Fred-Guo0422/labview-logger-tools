@@ -1,12 +1,10 @@
 # Labview Logger Tools
 
 #### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+Simple logging utility with log levels - run in global scope.
 
 #### 软件架构
-软件架构说明
+有相当多的日志包-这个试图成为一个非常简单的变体，它不需要在整个应用程序中连接，而是使用FGV代替。它引入了几个日志级别，以便轻松控制日志信息的深度。
 
 
 #### 安装教程
@@ -16,24 +14,45 @@ Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN�
 3.  xxxx
 
 #### 使用说明
+您所需要的就是在应用程序开始时初始化日志记录器。然后在应用程序的任何地方按特定级别进行日志记录。然后关闭记录器。
+![输入图片说明](global-logger-example1.png)
+该代码段将产生以下内容 (application_directory/logs/[year]/[month]/[day]/Demo_log.tsv)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+
+- 15:21:40.630 23.10.2018 INFO  For loop cycle: 0 Global_logger.lvlib:Example.vi
+- 15:21:40.630 23.10.2018 WARN  Something might go wrong..  Global_logger.lvlib:Example.vi
+- 15:21:40.630 23.10.2018 FATAL ..Ups ! Global_logger.lvlib:Example.vi
+
+此外，您可以创建多个命名记录器，并为每个记录器分配一个输出目的地(文件或UI控件)。
 
 #### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
 
 
 #### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+- Globally accessible logger
+- Six logging levels
+- Configurable level meaning:
+    1. 这里是列表文本Standard: Ignores messages with log level which is less important that the logger's level.
+    2. 这里是列表文本Positive: Ignores messages with log level with greater importance that the logger's level.
+    3. 这里是列表文本Exact: Ignores messages with all levels except for the exact logger's level.
+- Error wire check & error logging
+Configurable record fields:
+timestamp
+log level
+logger name
+message
+source VI
+source app
+Output to file
+csv, tsv formats
+year/month/day folder structure
+configurable file size
+configurable maximum logs age
+Output to UI controls
+String, Listbox, Multicolumn Listbox, Table controls
+Option to write to multiple named loggers
+Multiple outputs (file, UI) per logger each with it's own setup
+Configurable record ordering: new records to top / bottom
+Timestamp formatting
