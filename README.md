@@ -1,4 +1,4 @@
-# Logger
+﻿131# Logger
 Simple logging utility with log levels - run in global scope.
 
 # motivation
