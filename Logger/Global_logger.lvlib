@@ -1,6 +1,13 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Library LVVersion="20008000">
-	<Property Name="NI.Lib.Icon" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!*(!!!*Q(C=\&gt;5R4BN"&amp;-&lt;R,YACL1P[S&amp;&gt;Y6X$D,E)S2XC^KWUJ+&amp;R2U&lt;QS,HW!3-B8?&amp;@Q&amp;8S&amp;T8`'&lt;RUC*"QJ1;*AFVH-.T.P@NY&gt;,6)`PEL8'C]&gt;.W]?@^%`HM@V;OUSN8.`SWPA&gt;"F00X`UD^/F[LS;``PS9PZJ^+PVJ`Z``(Y8$HU?H]@(0OYP&lt;O*XX]^@V&amp;Z%N+1&amp;T7GGNNS9Z%G?Z%G?Z%E?Z%%?Z%%?Z%(OZ%\OZ%\OZ%ZOZ%:OZ%:OZ%&lt;?4X+2CVTEE*,&amp;EY73IEG":$!5*:@%EXA34_,B4S7?R*.Y%E`C99A34_**0)EH]4".C3@R**\%EXAIV38:4X)]C9@S#DS"*`!%HM$$EAI]!3"9,#A=&amp;)'BI$0Y%(A#4_$BIQ*0Y!E]A3@QU+X!%XA#4_!*0%TJ&gt;S7[JJXE?#ADR_.Y()`D=4S5FO.R0)\(]4A?FJ0D=4Q/QFH1+1Z"TC2HA0/(YX%]`*,D=4S/R`%Y(LL[%`*_:ZKGH?2Y$)`B-4S'R`"11I&lt;(]"A?QW.Y+#P$9XA-D_%R0#QFQW.Y$)]"-2:F?2H&amp;D)H')#-Q00TUX7,^+5787$_FWLSK4;H;&lt;+J.J.I=KI?O?JCKB[3[_;K&lt;KLJ:KJOA_H)KN!KD7E1VO1X5E?O"NK@N;"P;1&amp;P2&amp;L1Z&lt;&gt;;G`O?"R_.2B]."_`V?O^V/G]V'QT"IN6JJM6BI0J^L.JO&gt;8Q0@/-]PB..\[:\0L@VY(.&lt;&lt;\Q`,\&gt;X0^@&lt;W;@H]/#SHPH@]0`M"XIW[UMP;X+.@QP^SJ1!!!!!</Property>
+	<Property Name="EndevoGOOP_ColorFrame" Type="UInt">0</Property>
+	<Property Name="EndevoGOOP_ColorHeader" Type="UInt">10550271</Property>
+	<Property Name="EndevoGOOP_ColorPrivate" Type="UInt">16751402</Property>
+	<Property Name="EndevoGOOP_ColorPublic" Type="UInt">16250871</Property>
+	<Property Name="EndevoGOOP_ColorTextBody" Type="UInt">0</Property>
+	<Property Name="EndevoGOOP_ColorTextHeader" Type="UInt">0</Property>
+	<Property Name="EndevoGOOP_FrameThickness" Type="UInt">1</Property>
+	<Property Name="NI.Lib.Icon" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)M!!!*Q(C=\&gt;7R5?.!&amp;-&lt;RTQQ"K8/#'\@QF9!#'H!,LQ%#JQL&gt;QMMO)0*="W\BN?!7X),Z\\,D-T/!E_0GZI96TUD@;H&gt;`3,+1?LO4&lt;H7[VBY`&lt;&lt;`\4_@$SU&amp;P_U`NZ]W-\`:@(@^O@^P^:0W0`&amp;?;PNNX_\`&lt;@06,]/8@AY8;CYAK+KGAL,&lt;MK=C,P-C,P-C,0-G40-G40-G40-C$0-C$0-C$X/1G.\H*47\SPJ',8/1CBV1M8CR54&amp;J-5*Q-2=6(Y3E]B;@Q=+D#5XA+4_%J0*SCQF.Y#E`B+4Q-5_%J0)7H]"1?JOK3[BMZHM,$^%I]C3@R**\%QZ*+0!EA73S:/*E%BJ,/:#@R**\%Q[Y34_**0)EH]&gt;#NR*.Y%E`C34Q-[6=FO[:NZ(C92I%H]!3?Q".YG&amp;K"*`!%HM!4?&amp;B/A3@Q")BAQ7"S#!I'"3=%"Y%H]0",A3@Q"*\!%XDI[H=I_J6JGL;2YT%?YT%?YT%?JJ$R')`R')`R-+W-RXC-RXC-B[6E0-:D0!:C&amp;G6ZG=H-1(/3#9S(H`[UO._F\",X42I0L]:$K@'Q;4R%'A_(REX8O*E;.UHDYGN=6)W,J8%2.0YY$&lt;1'2G-2D=(N2"XZ0&amp;"\;E&gt;NK1WVJC:K23X&lt;U$^]YP&amp;YV/&amp;QU([`VW[XUX;\V7;TU8K^VD2.7KV77C[8Z^@!$\&lt;T#_(VP43T0T`=,_&lt;J*`7,?F\-4RS4`Y8`T``!OV%XOFS$;`1#,?";+!!!!!!</Property>
 	<Property Name="NI.Lib.SourceVersion" Type="Int">536903680</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
@@ -49,9 +56,10 @@
 			<Item Name="Log INFO.vi" Type="VI" URL="../Log INFO.vi"/>
 			<Item Name="Log WARN.vi" Type="VI" URL="../Log WARN.vi"/>
 			<Item Name="Log ERROR.vi" Type="VI" URL="../Log ERROR.vi"/>
+			<Item Name="Log on Error.vi" Type="VI" URL="../Log on Error.vi"/>
 			<Item Name="Log FATAL.vi" Type="VI" URL="../Log FATAL.vi"/>
 		</Item>
-		<Item Name="Log on Error.vi" Type="VI" URL="../Log on Error.vi"/>
+		<Item Name="Log.vi" Type="VI" URL="../Log.vi"/>
 		<Item Name="Create Logger.vi" Type="VI" URL="../Create Logger.vi"/>
 		<Item Name="Destroy.vi" Type="VI" URL="../Destroy.vi"/>
 	</Item>
