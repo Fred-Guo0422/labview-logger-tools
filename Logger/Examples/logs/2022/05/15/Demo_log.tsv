@@ -1,0 +1,6 @@
+21:37:17.450 2022/5/15	INFO	For loop cycle: 0	Global_logger.lvlib:Example - File.vi
+
+21:37:17.450 2022/5/15	WARN	Something might go wrong..	Global_logger.lvlib:Example - File.vi
+
+21:37:17.450 2022/5/15	FATAL	..Ups !	Global_logger.lvlib:Example - File.vi
+
